@@ -2,8 +2,24 @@
     LISTA DE PRODUTOS
 </h2>
 
-<ul>
-    <li *ngFor="let prod of listaProdutos">
+<ul class='list-group'> 
+    <li *ngFor="let prod of listaProdutos" class="list-group-item" (click)="onSelect(prod)" [class.selecionado] = "prod == produtoSelecionado">
         <span>{{prod.name}}</span> - {{prod.price | currency}}
+        teste
     </li>
 </ul>
+
+<div *ngIf="produtoSelecionado.name != '' ">
+    <label>Nome
+        <span>{{produtoSelecionado.name | uppercase}}</span>
+    </label> <br>
+
+    <label>Preço
+        <span>{{produtoSelecionado.price | currency}}</span>
+    </label> <br>
+
+    <label>Quantidade
+        <span>{{produtoSelecionado.qtde}}</span>
+    </label> <br> 
+
+</div>

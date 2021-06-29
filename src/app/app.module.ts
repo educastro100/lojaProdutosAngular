@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProdutoComponent } from './produto/produto.component';
 
+
+
 //Adiciona importaçãop da biblioteca de formulários
 import {FormsModule} from '@angular/forms';
 
