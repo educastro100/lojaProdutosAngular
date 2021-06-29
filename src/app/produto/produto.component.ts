@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Produto } from './produto';
 import { PRODUTOS } from '../listaProdutos';
+import { ProdutoService } from '../produto.service';
 
 @Component({
   selector: 'app-produto',
@@ -9,23 +10,27 @@ import { PRODUTOS } from '../listaProdutos';
 })
 export class ProdutoComponent implements OnInit {
 
-  // produto: Produto = {
-  //   name: "Notebook",
-  //   price: 3000,
-  //   qtde: 5
-  // };
+  
+  // Declara a variável que guarda a lista de produtos
+  listaProdutos : Produto[] = [];
 
-  listaProdutos = PRODUTOS;
-
+  // Recebe o produto selecionado
   produtoSelecionado : Produto = { name: '', price : 0, qtde: 0};
+  
   onSelect(produto: Produto): void {
     this.produtoSelecionado = produto;
   }
 
+  // Método construtor
+  constructor(private produtoService: ProdutoService) { }
 
-  constructor() { }
+  // Método que chama o service responsável por pegar os produtos
+  getProdutos(): void{
+    this.listaProdutos = this.produtoService.getProdutos();
+  }
 
   ngOnInit(): void {
+    this.getProdutos();
   }
 
 }
