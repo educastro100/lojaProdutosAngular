@@ -9,17 +9,4 @@
     </li>
 </ul>
 
-<div *ngIf="produtoSelecionado.name != '' ">
-    <label>Nome
-        <span>{{produtoSelecionado.name | uppercase}}</span>
-    </label> <br>
-
-    <label>Preço
-        <span>{{produtoSelecionado.price | currency}}</span>
-    </label> <br>
-
-    <label>Quantidade
-        <span>{{produtoSelecionado.qtde}}</span>
-    </label> <br> 
-
-</div>
+<app-produto-detalhes [produto]="produtoSelecionado"></app-produto-detalhes>

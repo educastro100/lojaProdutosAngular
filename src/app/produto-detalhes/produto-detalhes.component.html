@@ -1,0 +1,14 @@
+<div *ngIf="produto.name != '' ">
+    <label>Nome
+        <span>{{produto.name | uppercase}}</span>
+    </label> <br>
+
+    <label>Preço
+        <span>{{produto.price | currency}}</span>
+    </label> <br>
+
+    <label>Quantidade
+        <span>{{produto.qtde}}</span>
+    </label> <br> 
+
+</div>
