@@ -1,3 +1,7 @@
+<div *ngIf="produto">
+    <button (click)="voltar()">Voltar</button>
+</div>
+
 <div *ngIf="produto.name != '' ">
     <label>Nome
         <span>{{produto.name | uppercase}}</span>

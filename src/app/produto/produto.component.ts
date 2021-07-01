@@ -15,11 +15,11 @@ export class ProdutoComponent implements OnInit {
   listaProdutos : Produto[] = [];
 
   // Recebe o produto selecionado
-  produtoSelecionado : Produto = { name: '', price : 0, qtde: 0};
+  // produtoSelecionado : Produto = { name: '', price : 0, qtde: 0};
   
-  onSelect(produto: Produto): void {
-    this.produtoSelecionado = produto;
-  }
+  // onSelect(produto: Produto): void {
+  //   this.produtoSelecionado = produto;
+  // }
 
   // Método construtor
   constructor(private produtoService: ProdutoService) { }

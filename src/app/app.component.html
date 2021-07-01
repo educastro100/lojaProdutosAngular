@@ -4,10 +4,15 @@
   </h1>
 </header>
 
+<nav>
+  <a routerLink="/produtos">Produtos</a> |
+  <a routerLink="/dashboard">Dashboard</a>
+</nav>
+
 <main>
 
   <!-- Invoca o componente produto teste1-->
-  <app-produto></app-produto>
+  <router-outlet></router-outlet>
 
 </main>
 

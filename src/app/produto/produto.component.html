@@ -3,10 +3,11 @@
 </h2>
 
 <ul class='list-group'> 
-    <li *ngFor="let prod of listaProdutos" class="list-group-item" (click)="onSelect(prod)" [class.selecionado] = "prod == produtoSelecionado">
+    <li *ngFor="let prod of listaProdutos; let i = index" class="list-group-item" >
+        <a routerLink="/detalhes/{{i}}">
         <span>{{prod.name}}</span> - {{prod.price | currency}}
-        teste
+        </a>
     </li>
 </ul>
 
-<app-produto-detalhes [produto]="produtoSelecionado"></app-produto-detalhes>
+<!-- <app-produto-detalhes [produto]="produtoSelecionado"></app-produto-detalhes> -->

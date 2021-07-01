@@ -10,12 +10,14 @@ import { ProdutoComponent } from './produto/produto.component';
 //Adiciona importaçãop da biblioteca de formulários
 import {FormsModule} from '@angular/forms';
 import { ProdutoDetalhesComponent } from './produto-detalhes/produto-detalhes.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProdutoComponent,
-    ProdutoDetalhesComponent
+    ProdutoDetalhesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
